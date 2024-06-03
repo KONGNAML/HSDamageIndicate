@@ -1,0 +1,7 @@
+name: HSDamageIndicate
+version: '${version}'
+main: org.kongit.hsdamageindicate.HSDamageIndicate
+api-version: '1.17'
+author: 'KONGNAML'
+depend:
+  - HSLib

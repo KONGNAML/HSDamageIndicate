@@ -1,0 +1,12 @@
+#Tick of data save period (for file)
+#저장 주기 (틱) (파일 저장 전용)
+savePeriod: 10
+
+#MongoDB
+database:
+  use: false
+  ip: "localhost"
+  port: "27017"
+  username: "root"
+  password: "passwordispassword"
+  database: "user_data"

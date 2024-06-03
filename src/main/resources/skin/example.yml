@@ -1,0 +1,50 @@
+#
+# How to use ItemsAdder and oraxen?!
+# itemsadder:myitem:itemname , oraxen:items
+#
+# MiniMessage format: https://webui.advntr.dev/
+#
+# if lore start with [op]
+# show only op player
+#
+indicate-items: STONE
+indicate-name: "<white>Stone</white>"
+indicate-lore:
+  - ""
+  - "<gray>Stone Skin</gray>"
+  - ""
+  - "[op]Skin Permission : {permission}"
+  - "[op]"
+indicate-permission:
+  use: false
+  contents: "hsdamage.skin.stone"
+
+#데미지 표시의 효과입니다.
+#  “spin” -> 데미지 표시가 회전합니다.
+#  “bound” -> 데미지 표시가 위 아래로 이동합니다.
+#  “basic” -> 기본값입니다.
+indicate-effect: "basic"
+
+#데미지 표시가 생성되는 범위를 설정합니다.
+indicate-region: 1
+
+#데미지 표시의 지속 시간입니다.
+indicate-duration: 2
+
+#데미지 표시 숫자 앞에 붙는 접두사입니다.
+indicate-prefix: ' + '
+
+indicate-skin:
+  use: true
+  skin:
+    "0": "<gray>0</gray>"
+    "1": "<gray>1</gray>"
+    "2": "<gray>2</gray>"
+    "3": "<gray>3</gray>"
+    "4": "<gray>4</gray>"
+    "5": "<gray>5</gray>"
+    "6": "<gray>6</gray>"
+    "7": "<gray>7</gray>"
+    "8": "<gray>8</gray>"
+    "9": "<gray>9</gray>"
+    dot: "<gray>.</gray>"
