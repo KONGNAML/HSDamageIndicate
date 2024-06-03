@@ -1,3 +1,8 @@
+
+default:
+  use: true
+  skin: "example"
+  
 #데미지 표시의 효과입니다.
 #  “spin” -> 데미지 표시가 회전합니다.
 #  “bound” -> 데미지 표시가 위 아래로 이동합니다.

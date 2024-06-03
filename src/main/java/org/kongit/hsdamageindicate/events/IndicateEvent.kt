@@ -43,7 +43,11 @@ class IndicateEvent : HSListener(HSDamageIndicate.getInstance()) {
         }
     }
     private fun getDamageString(player:Player,damage: String) : String {
-        val data = storage?.get("user", Pair.of("uuid",player.uniqueId.toString()))?.get(0)?.get("skin").toString().replace("\"","") ?: ""
+        var data = (storage?.get("user", Pair.of("uuid",player.uniqueId.toString()))?.get(0)?.get("skin").toString() ?: "").replace("\"","")
+        if (data == "null" && HSDamageIndicate.getInstance()!!.config.getBoolean("default.use")) {
+            val key = if ((HSDamageIndicate.getInstance()!!.config.getString("default.skin") ?: "").contains(".yml")) { HSDamageIndicate.getInstance()!!.config.getString("default.skin") ?: "" } else { (HSDamageIndicate.getInstance()!!.config.getString("default.skin") ?: "") + ".yml" }
+            if (ConfigManager.skins.keys.contains(key)) { data = key }
+        }
         val skin = ConfigManager.skins[data] ?: mutableMapOf()
         val prefix = (skin["indicate-prefix"] ?: HSDamageIndicate.getInstance()!!.config.getString("indicate-prefix") ?: "").toString().replace("\"","")
         var damageString: String = ""
